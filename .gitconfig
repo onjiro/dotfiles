@@ -1,0 +1,11 @@
+[user]
+	name = onjiro
+	email = onjiro.mohyahya@gmail.com
+[core]
+	excludesfile = /home/chihiro/.gitignore
+[aliad]
+	co = checkout
+[alias]
+	co = checkout
+	st = status
+	br = branch
