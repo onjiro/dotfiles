@@ -25,7 +25,7 @@ DOT_FILES=( .zprofile .zshrc .gitconfig .gitignore .emacs .emacs.d .hgrc )
 for file in ${DOT_FILES[@]}; do
     dest=$HOME/$file
     if [ $replace ]; then
-        rm $dest
+        if [ -e $dest ]; then rm $dest; fi
     fi
     ln -s $(cd $(dirname $0) && pwd)/$file $dest
 done
