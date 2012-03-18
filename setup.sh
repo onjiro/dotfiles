@@ -28,6 +28,6 @@ for file in ${DOT_FILES[@]}; do
         if [ -e $dest ]; then rm $dest; fi
     fi
     if [ ! -e $dest ]; then
-    ln -s $(cd $(dirname $0) && pwd)/$file $dest
+        ln -s $(cd $(dirname $0) && pwd)/$file $dest
     fi
 done
