@@ -27,5 +27,7 @@ for file in ${DOT_FILES[@]}; do
     if [ $replace ]; then
         if [ -e $dest ]; then rm $dest; fi
     fi
+    if [ ! -e $dest ]; then
     ln -s $(cd $(dirname $0) && pwd)/$file $dest
+    fi
 done
