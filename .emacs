@@ -20,11 +20,14 @@
 (add-to-list 'default-frame-alist '(height . 40))
 
 ;;; フォントの指定
+(if window-system (
 (set-default-font "Inconsolata-11")
 (set-face-font 'variable-pitch "Inconsolata-11")
 (set-fontset-font (frame-parameter nil 'font)
                   'japanese-jisx0208
                   '("Takaoゴシック" . "unicode-bmp")
+)
+)
 )
 
 ;;; モードラインに行数と列数を表示
