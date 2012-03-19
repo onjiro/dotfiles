@@ -6,15 +6,6 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2 indent-tabs-mode nil)
 
-(add-to-list 'load-path "~/.emacs.d/elisp/emacs-goodies-el")
-(require 'color-theme)
-(eval-after-load "color-theme"
-  '(progn
-     (color-theme-initialize)
-     (color-theme-taylor)
-     (set-frame-parameter nil 'alpha 85)))
-
-
 ;;; 起動時のウィンドウサイズ
 (add-to-list 'default-frame-alist '(width . 120))
 (add-to-list 'default-frame-alist '(height . 40))
