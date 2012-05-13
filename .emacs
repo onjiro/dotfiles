@@ -119,3 +119,15 @@
 ;; sass mode
 (require 'sass-mode)
 (add-to-list 'auto-mode-alist '("\\.sass$" . sass-mode))
+
+;; gist el
+(add-to-list 'load-path "~/.emacs.d/vendor/gist.el")
+(require 'gist)
+(setq github-user "onjiro")
+;; github-token must to be secret
+;; describe following on ~/.githubtoken
+;;   (setq github-token "api token")
+(load-file "~/.githubtoken")
+
+;; to use curl
+(setq gist-use-curl t)
