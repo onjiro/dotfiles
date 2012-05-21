@@ -46,8 +46,12 @@
 (setq install-elisp-repository-directory "~/.emacs.d/")
 (require 'auto-install)
 (setq auto-install-directory "~/.emacs.d/elisp/auto-install/")
+(add-to-list 'load-path "~/.emacs.d/elisp/auto-install")
 (auto-install-update-emacswiki-package-name t)
 (auto-install-compatibility-setup)
+
+;;; anything
+(require 'anything-startup)
 
 ;; haml-mode
 (require 'haml-mode)
