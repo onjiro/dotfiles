@@ -1,8 +1,9 @@
+
 PATH=.:$PATH
 
 # node nvm coffee
 source ~/.nvm/nvm.sh
-nvm use v0.6.12
+nvm use v0.6.19
 
 # retreat g as git
 alias -g g="git"
