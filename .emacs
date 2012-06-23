@@ -1,8 +1,9 @@
 (add-to-list 'default-frame-alist '(alpha . 85))
+(setq load-path (cons "~/.emacs.d/elisp" load-path))
+(require 'linum)
 (global-linum-mode t)
 (tool-bar-mode 0)
 (show-paren-mode 1)
-(setq load-path (cons "~/.emacs.d/elisp" load-path))
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2 indent-tabs-mode nil)
 
