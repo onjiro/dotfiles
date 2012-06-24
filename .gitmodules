@@ -10,3 +10,9 @@
 [submodule ".emacs.d/vendor/gh.el"]
 	path = .emacs.d/vendor/gh.el
 	url = git://github.com/sigma/gh.el.git
+[submodule ".emacs.d/vendor/pcache"]
+	path = .emacs.d/vendor/pcache
+	url = git://github.com/sigma/pcache.git
+[submodule ".emacs.d/vendor/logito"]
+	path = .emacs.d/vendor/logito
+	url = git://github.com/sigma/logito.git
