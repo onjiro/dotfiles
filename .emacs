@@ -2,7 +2,12 @@
 (setq load-path (cons "~/.emacs.d/elisp" load-path))
 (require 'linum)
 (global-linum-mode t)
-(tool-bar-mode 0)
+(if tool-bar-mode
+  (tool-bar-mode 0)
+)
+(if menu-bar-mode
+  (menu-bar-mode -1)
+)
 (show-paren-mode 1)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2 indent-tabs-mode nil)
