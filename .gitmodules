@@ -7,3 +7,6 @@
 [submodule ".emacs.d/vendor/undo-tree"]
 	path = .emacs.d/vendor/undo-tree
 	url = git://github.com/emacsmirror/undo-tree.git
+[submodule ".emacs.d/vendor/gh.el"]
+	path = .emacs.d/vendor/gh.el
+	url = git://github.com/sigma/gh.el.git
