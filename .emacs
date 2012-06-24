@@ -130,6 +130,13 @@
 (require 'sass-mode)
 (add-to-list 'auto-mode-alist '("\\.sass$" . sass-mode))
 
+
+;; gh.el
+(add-to-list 'load-path "~/.emacs.d/vendor/pcache")
+(add-to-list 'load-path "~/.emacs.d/vendor/logito")
+(add-to-list 'load-path "~/.emacs.d/vendor/gh.el")
+(require 'gh)
+
 ;; gist el
 (add-to-list 'load-path "~/.emacs.d/vendor/gist.el")
 (require 'gist)
