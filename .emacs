@@ -153,3 +153,8 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/undo-tree")
 (require 'undo-tree)
 (global-undo-tree-mode)
+
+;; zencoding.el
+(add-to-list 'load-path "~/.emacs.d/vendor/zencoding")
+(require 'zencoding-mode)
+(add-hook 'html-mode 'zencoding-mode)

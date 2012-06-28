@@ -16,3 +16,6 @@
 [submodule ".emacs.d/vendor/logito"]
 	path = .emacs.d/vendor/logito
 	url = git://github.com/sigma/logito.git
+[submodule ".emacs.d/vendor/zencoding"]
+	path = .emacs.d/vendor/zencoding
+	url = git://github.com/rooney/zencoding.git
