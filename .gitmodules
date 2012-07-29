@@ -19,3 +19,6 @@
 [submodule ".emacs.d/vendor/zencoding"]
 	path = .emacs.d/vendor/zencoding
 	url = git://github.com/rooney/zencoding.git
+[submodule ".emacs.d/vendor/platform-p"]
+	path = .emacs.d/vendor/platform-p
+	url = git://github.com/ongaeshi/platform-p.git

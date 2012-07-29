@@ -1,3 +1,7 @@
+;; プラットフォーム判別用ライブラリ
+(add-to-list 'load-path "~/.emacs.d/vendor/platform-p")
+(require 'platform-p)
+
 (add-to-list 'default-frame-alist '(alpha . 85))
 (setq load-path (cons "~/.emacs.d/elisp" load-path))
 (require 'linum)
