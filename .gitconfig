@@ -2,7 +2,7 @@
 	name = onjiro
 	email = onjiro.mohyahya@gmail.com
 [core]
-	excludesfile = /home/chihiro/.gitignore
+	excludesfile = ~/.gitignore
 [aliad]
 	co = checkout
 [alias]
