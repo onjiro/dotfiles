@@ -3,6 +3,7 @@
 	email = onjiro.mohyahya@gmail.com
 [core]
 	excludesfile = ~/.gitignore
+	quotepath = false
 [aliad]
 	co = checkout
 [alias]
