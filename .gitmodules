@@ -22,3 +22,6 @@
 [submodule ".emacs.d/vendor/platform-p"]
 	path = .emacs.d/vendor/platform-p
 	url = git://github.com/ongaeshi/platform-p.git
+[submodule "magit"]
+	path = magit
+	url = git://github.com/magit/magit.git
