@@ -164,6 +164,6 @@
 (add-hook 'html-mode 'zencoding-mode)
 
 ;; magit
-(add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
+(add-to-list 'load-path "~/.emacs.d/vendor/magit")
 (require 'magit)
 
