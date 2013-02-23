@@ -167,3 +167,7 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/magit")
 (require 'magit)
 
+;; auto-complete
+(add-to-list 'load-path "~/.emacs.d/vendor/auto-complete")
+(require 'auto-complete-config)
+(ac-config-default)
