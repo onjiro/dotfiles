@@ -37,6 +37,9 @@ kterm*|xterm)
     ;;
 esac
 
+# use z
+. ~/z/z.sh
+
 # use zsh-completions
 fpath=(~/.zsh.d $fpath)
 

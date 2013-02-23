@@ -28,3 +28,6 @@
 [submodule ".emacs.d/vendor/auto-complete"]
 	path = .emacs.d/vendor/auto-complete
 	url = git://github.com/auto-complete/auto-complete.git
+[submodule "z"]
+	path = z
+	url = git://github.com/rupa/z.git

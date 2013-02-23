@@ -21,7 +21,7 @@ while [ -n "$1" ]; do
 done
 
 # make symbolic links
-DOT_FILES=( .zprofile .zshrc .gitconfig .gitignore .emacs.d .hgrc .tmux.conf)
+DOT_FILES=( .zprofile .zshrc .gitconfig .gitignore .emacs.d .hgrc .tmux.conf z)
 for file in ${DOT_FILES[@]}; do
     dest=$HOME/$file
     if [ $replace ]; then
