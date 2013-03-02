@@ -180,3 +180,27 @@
             (php-completion-mode t)
             (define-key php-mode-map (kbd "C-o") 'phpcmp-complete)))
 
+;; white-space
+;; タブと全角空白のみ表示
+(autoload 'whitespace-mode           "whitespace"
+  "Toggle whitespace visualization."        t)
+(autoload 'whitespace-toggle-options "whitespace"
+  "Toggle local `whitespace-mode' options." t)
+(setq whitespace-style '(face tabs tab-mark spaces space-mark))
+(setq whitespace-display-mappings
+      '((space-mark ?\u3000 [?\u25a1])
+        ;; warning: the mapping below has a problem.
+        ;; when a tab occupies exactly one colun, it will display the
+        ;; charactor ?\xBB at that column followed by a tab which goes to
+        ;; the next tab column.
+        ;; if this is a problem for you, please, comment the line below.
+        (tab-mark ?\t [?\xBB ?\t] [?\\ ?\t])))
+(setq whitespace-space-regexp "\\(\u3000+\\)")
+(set-face-foreground 'whitespace-tab "#adff2f")
+(set-face-background 'whitespace-tab 'nil)
+(set-face-underline  'whitespace-tab t)
+(set-face-foreground 'whitespace-space "#7cfc00")
+(set-face-background 'whitespace-space 'nil)
+(set-face-bold-p     'whitespace-space t)
+(global-whitespace-mode 1)
+(global-set-key (kbd "C-x w") 'global-whitespace-mode)
