@@ -2,8 +2,10 @@
 PATH=.:$PATH
 
 # node nvm coffee
-source ~/.nvm/nvm.sh
-nvm use v0.8.11
+if [ -e ~/.nvm/nvm.sh ]; then
+  source ~/.nvm/nvm.sh
+  nvm use v0.8.11
+fi
 
 # retreat g as git
 alias -g g="git"
@@ -15,5 +17,7 @@ alias -g tmux="tmux -2"
 alias -g emacs='TERM=xterm-256color emacs -nw'
 
 # rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-rvm use 1.9.3
+if [ -e $HOME/.rvm ]; then
+  [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+  rvm use 1.9.3
+fi
