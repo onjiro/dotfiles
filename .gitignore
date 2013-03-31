@@ -8,3 +8,5 @@ tramp
 .\#*
 build.log
 *.elc
+*.orig
+*.rej
