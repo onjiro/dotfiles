@@ -2,6 +2,7 @@
 \#*\#
 /.emacs.desktop
 /.emacs.desktop.lock
+.emacs.d/ac-comphist.dat
 .elc
 auto-save-list
 tramp
