@@ -49,6 +49,15 @@
   (recenter))
 (global-set-key "\C-c\C-l" 'toggle-truncate-lines)
 
+;;; マウスホイール有効化
+;; @see http://d.hatena.ne.jp/sabottenda/20120602/1338643214
+(unless (fboundp 'track-mouse)
+  (defun track-mouse (e)))
+(xterm-mouse-mode t)
+(require 'mouse)
+(require 'mwheel)
+(mouse-wheel-mode t)
+
 ;;; install.el の設定
 (require 'install-elisp)
 
