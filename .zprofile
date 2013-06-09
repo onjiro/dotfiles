@@ -19,5 +19,4 @@ alias -g emacs='TERM=xterm-256color emacs -nw'
 # rvm
 if [ -e $HOME/.rvm ]; then
   [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-  rvm use 1.9.3
 fi
