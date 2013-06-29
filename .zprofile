@@ -15,8 +15,3 @@ alias -g tmux="tmux -2"
 
 # emacs use always with --no-window-system
 alias -g emacs='TERM=xterm-256color emacs -nw'
-
-# rvm
-if [ -e $HOME/.rvm ]; then
-  [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-fi
