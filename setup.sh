@@ -20,6 +20,10 @@ while [ -n "$1" ]; do
   esac
 done
 
+# setup ruby-build for rbenv
+mkdir -p .rbenv/plugins
+ln -s `pwd`/ruby-build .rbenv/plugins/ruby-build
+
 # make symbolic links
 DOT_FILES=( .zprofile .zshrc .gitconfig .gitignore .emacs.d .hgrc .tmux.conf z .rbenv)
 for file in ${DOT_FILES[@]}; do
