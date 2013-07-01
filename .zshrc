@@ -55,5 +55,5 @@ precmd () {
 RPROMPT="%1(v|%F{green}%1v%f|)"
 
 # use rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
 eval "$(rbenv init -)"
