@@ -37,3 +37,6 @@
 [submodule "ruby-build"]
 	path = ruby-build
 	url = https://github.com/sstephenson/ruby-build.git
+[submodule ".emacs.d/vendor/markdown-mode"]
+	path = .emacs.d/vendor/markdown-mode
+	url = git://jblevins.org/git/markdown-mode.git
