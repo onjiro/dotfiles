@@ -9,7 +9,7 @@ zstyle :compinstall filename '/home/chihiro/.zshrc'
 
 autoload -Uz compinit
 compinit
-# End of lines added by compinstall
+zstyle ':completion:*' list-colors ''
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -60,6 +60,18 @@ precmd () {
     [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
 }
 RPROMPT="%1(v|%F{green}%1v%f|)"
+
+# colorize
+case ${OSTYPE} in
+    darwin*)
+        alias ls="ls -G"
+        alias grep='grep --color=auto'
+        ;;
+    linux*)
+        alias ls="ls --color=auto"
+        alias grep='grep --color=auto'
+        ;;
+esac
 
 # use rbenv
 export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
