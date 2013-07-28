@@ -85,6 +85,11 @@ cons25)
     ;;
 esac
 
+# tool aliases
+alias -g g="git"
+alias -g tmux="tmux -2"
+alias -g emacs='TERM=xterm-256color emacs -nw'
+
 # use rbenv
 export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
 eval "$(rbenv init -)"
