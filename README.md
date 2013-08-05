@@ -1,8 +1,9 @@
-= dot-files
+dot-files
+=========
 
 files for environment setup
 
-== usage
+## usage
 
 Type as below to make links at $HOME
 
