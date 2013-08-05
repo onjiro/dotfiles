@@ -79,5 +79,7 @@ alias -g tmux="tmux -2"
 alias -g emacs='TERM=xterm-256color emacs -nw'
 
 # use rbenv
-export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
-eval "$(rbenv init -)"
+if [ -e $HOME/.rbenv/bin ]; then
+  export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
+  eval "$(rbenv init -)"
+fi
