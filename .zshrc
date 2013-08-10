@@ -17,6 +17,10 @@ zstyle :compinstall filename '/home/chihiro/.zshrc'
 autoload -Uz compinit
 compinit
 
+setopt auto_cd
+setopt auto_push
+setopt correct
+
 # show path at prompt
 PROMPT="%/%% "
 PROMPT2="%_%% "
