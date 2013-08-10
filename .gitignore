@@ -3,6 +3,7 @@
 /.emacs.desktop
 /.emacs.desktop.lock
 .emacs.d/ac-comphist.dat
+.emacs.d/elpa
 .elc
 auto-save-list
 tramp

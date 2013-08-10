@@ -1,3 +1,18 @@
+(add-to-list 'load-path "~/.emacs.d/site-lisp")
+
+;; package.el を利用してインストール
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
+
+;; init-loader.el を利用して設定を分割
+;; "~/.emacs.d/inits" はデフォルトのロードパス
+(require 'init-loader)
+(setq init-loader-byte-compile t)
+(setq init-loader-show-log-after-init nil)
+(init-loader-load "~/.emacs.d/inits")
+
 ;; プラットフォーム判別用ライブラリ
 (add-to-list 'load-path "~/.emacs.d/vendor/platform-p")
 (require 'platform-p)
