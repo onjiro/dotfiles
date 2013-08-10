@@ -19,35 +19,10 @@
 
 (add-to-list 'default-frame-alist '(alpha . 85))
 (setq load-path (cons "~/.emacs.d/elisp" load-path))
-(require 'linum)
-(global-linum-mode t)
-(if tool-bar-mode
-  (tool-bar-mode 0)
-)
-(if menu-bar-mode
-  (menu-bar-mode -1)
-)
-(show-paren-mode 1)
-(setq-default indent-tabs-mode nil)
-(setq-default tab-width 2 indent-tabs-mode nil)
 
 ;;; 起動時のウィンドウサイズ
 (add-to-list 'default-frame-alist '(width . 120))
 (add-to-list 'default-frame-alist '(height . 40))
-
-;;; モードラインに行数と列数を表示
-(line-number-mode 1)
-(column-number-mode 1)
-
-;;; 折り返し表示ON/OFF
-(defun toggle-truncate-lines ()
-  "折り返し表示をトグル動作します."
-  (interactive)
-  (if truncate-lines
-      (setq truncate-lines nil)
-    (setq truncate-lines t))
-  (recenter))
-(global-set-key "\C-c\C-l" 'toggle-truncate-lines)
 
 ;;; マウスホイール有効化
 ;; @see http://d.hatena.ne.jp/sabottenda/20120602/1338643214
