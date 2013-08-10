@@ -6,8 +6,7 @@
 (if tool-bar-mode (tool-bar-mode 0))
 (if menu-bar-mode (menu-bar-mode -1))
 
-;; 対応する括弧をハイライト
-(show-paren-mode 1)
+;; インデントの設定
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 2 indent-tabs-mode nil)
 
