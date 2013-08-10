@@ -35,21 +35,6 @@
 (add-to-list 'default-frame-alist '(width . 120))
 (add-to-list 'default-frame-alist '(height . 40))
 
-;; 色の指定
-(set-face-foreground 'font-lock-comment-face "brightred")
-(set-face-foreground 'font-lock-string-face  "brightmagenta")
-
-;;; フォントの指定
-(if window-system (
-  (set-default-font "Inconsolata-11")
-  (set-face-font 'variable-pitch "Inconsolata-11")
-  (set-fontset-font (frame-parameter nil 'font)
-                    'japanese-jisx0208
-                    '("Takaoゴシック" . "unicode-bmp")
-                    )
-  )
-)
-
 ;;; モードラインに行数と列数を表示
 (line-number-mode 1)
 (column-number-mode 1)
