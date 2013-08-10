@@ -3,6 +3,7 @@ HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
 setopt share_history
+setopt hist_ignore_dups
 
 # Use emacs key bind
 bindkey -e
