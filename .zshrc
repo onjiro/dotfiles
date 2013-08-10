@@ -1,7 +1,8 @@
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
+setopt share_history
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
