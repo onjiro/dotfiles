@@ -3,7 +3,13 @@ HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
 setopt share_history
+
+# Use emacs key bind
 bindkey -e
+
+# disable stop with c-s
+stty stop undef
+
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/chihiro/.zshrc'
