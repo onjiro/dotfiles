@@ -24,12 +24,6 @@
 (add-to-list 'default-frame-alist '(width . 120))
 (add-to-list 'default-frame-alist '(height . 40))
 
-;; haml-mode
-(require 'haml-mode)
-(autoload 'haml-mode "haml-mode"
-  "Mode for editing haml source files" t)
-(add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
-
 ;;; rubyä÷òAÇÃê›íË
 (autoload 'ruby-mode "ruby-mode"
   "Mode for editing ruby source files" t)
