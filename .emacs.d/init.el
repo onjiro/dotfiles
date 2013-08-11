@@ -84,11 +84,6 @@
 
 (put 'set-goal-column 'disabled nil)
 
-;; sass mode
-(require 'sass-mode)
-(add-to-list 'auto-mode-alist '("\\.sass$" . sass-mode))
-
-
 ;; gh.el
 (add-to-list 'load-path "~/.emacs.d/vendor/pcache")
 (add-to-list 'load-path "~/.emacs.d/vendor/logito")
