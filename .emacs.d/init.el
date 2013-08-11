@@ -84,6 +84,11 @@
 
 (put 'set-goal-column 'disabled nil)
 
+;; stylus mode
+(require 'sws-mode)
+(require 'stylus-mode)
+(add-to-list 'auto-mode-alist '("\\.styl$" . stylus-mode))
+
 ;; sass mode
 (require 'sass-mode)
 (add-to-list 'auto-mode-alist '("\\.sass$" . sass-mode))
