@@ -24,6 +24,17 @@
 (add-to-list 'default-frame-alist '(width . 120))
 (add-to-list 'default-frame-alist '(height . 40))
 
+;;; install.el ‚Ìİ’è
+(require 'install-elisp)
+
+;;; auto-install.el ‚Ìİ’è
+(setq install-elisp-repository-directory "~/.emacs.d/")
+(require 'auto-install)
+(setq auto-install-directory "~/.emacs.d/elisp/auto-install/")
+(add-to-list 'load-path "~/.emacs.d/elisp/auto-install")
+(auto-install-update-emacswiki-package-name t)
+(auto-install-compatibility-setup)
+
 ;;; anything
 (require 'anything-startup)
 ;; my-anything-filelist+
