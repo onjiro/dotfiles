@@ -82,13 +82,6 @@
 ;; ミニバッファに表示し, かつ, オーバレイする.
 (setq ruby-block-highlight-toggle t)
 
-;; capitalize を backword で適用
-(global-set-key "\M-C" 'capitalize-backward-word)
-(defun capitalize-backward-word (arg)
-  "Capitalize previous word (or arg words)."
-  (interactive "p")
-  (capitalize-word (- arg)))
-
 ;; coffee mode
 (add-to-list 'load-path "~/.emacs.d/vendor/coffee-mode")
 (require 'coffee-mode)
