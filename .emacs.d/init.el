@@ -136,11 +136,6 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/magit")
 (require 'magit)
 
-;; auto-complete
-(add-to-list 'load-path "~/.emacs.d/vendor/auto-complete")
-(require 'auto-complete-config)
-(ac-config-default)
-
 ;; ;; white-space
 ;; ;; タブと全角空白のみ表示
 ;; (autoload 'whitespace-mode           "whitespace"
