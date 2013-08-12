@@ -141,18 +141,6 @@
 (require 'auto-complete-config)
 (ac-config-default)
 
-;; php-mode
-(require 'php-mode)
-(add-hook 'php-mode-hook
-          (lambda ()
-            (require 'php-completion)
-            (php-completion-mode t)
-            (define-key php-mode-map (kbd "C-o") 'phpcmp-complete)
-            (c-set-offset 'case-label' 2)
-            (c-set-offset 'arglist-intro' 2)
-            (c-set-offset 'arglist-cont-nonempty' 2)
-            (c-set-offset 'arglist-close' 0)))
-
 ;; ;; white-space
 ;; ;; タブと全角空白のみ表示
 ;; (autoload 'whitespace-mode           "whitespace"
