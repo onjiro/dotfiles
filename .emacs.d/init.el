@@ -1,71 +1,28 @@
+(add-to-list 'load-path "~/.emacs.d/site-lisp")
+
+;; package.el を利用してインストール
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
+
+;; init-loader.el を利用して設定を分割
+;; "~/.emacs.d/inits" はデフォルトのロードパス
+(require 'init-loader)
+(setq init-loader-byte-compile t)
+(setq init-loader-show-log-after-init nil)
+(init-loader-load "~/.emacs.d/inits")
+
 ;; プラットフォーム判別用ライブラリ
 (add-to-list 'load-path "~/.emacs.d/vendor/platform-p")
 (require 'platform-p)
 
 (add-to-list 'default-frame-alist '(alpha . 85))
 (setq load-path (cons "~/.emacs.d/elisp" load-path))
-(require 'linum)
-(global-linum-mode t)
-(if tool-bar-mode
-  (tool-bar-mode 0)
-)
-(if menu-bar-mode
-  (menu-bar-mode -1)
-)
-(show-paren-mode 1)
-(setq-default indent-tabs-mode nil)
-(setq-default tab-width 2 indent-tabs-mode nil)
 
 ;;; 起動時のウィンドウサイズ
 (add-to-list 'default-frame-alist '(width . 120))
 (add-to-list 'default-frame-alist '(height . 40))
-
-;; 色の指定
-(set-face-foreground 'font-lock-comment-face "brightred")
-(set-face-foreground 'font-lock-string-face  "brightmagenta")
-
-;;; フォントの指定
-(if window-system (
-  (set-default-font "Inconsolata-11")
-  (set-face-font 'variable-pitch "Inconsolata-11")
-  (set-fontset-font (frame-parameter nil 'font)
-                    'japanese-jisx0208
-                    '("Takaoゴシック" . "unicode-bmp")
-                    )
-  )
-)
-
-;;; モードラインに行数と列数を表示
-(line-number-mode 1)
-(column-number-mode 1)
-
-;;; 折り返し表示ON/OFF
-(defun toggle-truncate-lines ()
-  "折り返し表示をトグル動作します."
-  (interactive)
-  (if truncate-lines
-      (setq truncate-lines nil)
-    (setq truncate-lines t))
-  (recenter))
-(global-set-key "\C-c\C-l" 'toggle-truncate-lines)
-
-;;; マウスホイール有効化
-;; @see http://d.hatena.ne.jp/sabottenda/20120602/1338643214
-(unless (fboundp 'track-mouse)
-  (defun track-mouse (e)))
-(xterm-mouse-mode t)
-(require 'mouse)
-(require 'mwheel)
-(mouse-wheel-mode t)
-
-;; マウスホイールでスクロール
-;; @see http://d.hatena.ne.jp/supermassiveblackhole/20100908/1283910730
-(defun scroll-down-with-lines ()
-  "" (interactive) (scroll-down 1))
-(defun scroll-up-with-lines ()
-   "" (interactive) (scroll-up 1))
-(global-set-key [mouse-4] 'scroll-down-with-lines)
-(global-set-key [mouse-5] 'scroll-up-with-lines)
 
 ;;; install.el の設定
 (require 'install-elisp)
@@ -95,15 +52,6 @@
 (global-set-key "\C-x\C-b" 'anything-buffers+)
 (global-set-key "\C-x\C-f" 'my-anything-filelist+)
 (global-set-key "\C-x\C-v" 'find-file)
-
-;; markdown-mode
-(add-to-list 'load-path "~/.emacs.d/vendor/markdown-mode")
- 
-(autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
-(setq auto-mode-alist (cons '("\\.text" . markdown-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.txt" . markdown-mode) auto-mode-alist))
-(setq auto-mode-alist (cons '("\\.md" . markdown-mode) auto-mode-alist))
-
 ;; haml-mode
 (require 'haml-mode)
 (autoload 'haml-mode "haml-mode"
@@ -133,30 +81,6 @@
 (ruby-block-mode t)
 ;; ミニバッファに表示し, かつ, オーバレイする.
 (setq ruby-block-highlight-toggle t)
-
-;;; scalaモード用にロードパスを追加
-(add-to-list 'load-path "~/.emacs.d/scala-mode")
-    (require 'scala-mode-auto)
-
-;; Load the ensime lisp code...
-;;(add-to-list 'load-path "~/etc/ensime/elisp/")
-;;(require 'ensime)
-
-;; This step causes the ensime-mode to be started whenever
-;; scala-mode is started for a buffer. You may have to customize this step
-;; if you're not using the standard scala mode.
-;;(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
-
-;; MINI HOWTO:
-;; Open .scala file. M-x ensime (once per project)
-(put 'scroll-left 'disabled nil)
-
-;; capitalize を backword で適用
-(global-set-key "\M-C" 'capitalize-backward-word)
-(defun capitalize-backward-word (arg)
-  "Capitalize previous word (or arg words)."
-  (interactive "p")
-  (capitalize-word (- arg)))
 
 ;; coffee mode
 (add-to-list 'load-path "~/.emacs.d/vendor/coffee-mode")
