@@ -19,7 +19,7 @@ autoload -Uz compinit
 compinit
 
 setopt auto_cd
-setopt auto_push
+setopt auto_pushd
 setopt correct
 
 # show path at prompt
