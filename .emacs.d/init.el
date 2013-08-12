@@ -132,10 +132,6 @@
 (require 'zencoding-mode)
 (add-hook 'html-mode-hook 'zencoding-mode)
 
-;; magit
-(add-to-list 'load-path "~/.emacs.d/vendor/magit")
-(require 'magit)
-
 ;; ;; white-space
 ;; ;; タブと全角空白のみ表示
 ;; (autoload 'whitespace-mode           "whitespace"
