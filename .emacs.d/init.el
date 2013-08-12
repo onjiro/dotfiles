@@ -1,4 +1,8 @@
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
+;; install されていない場合、package install を行う
+(defun not-installed(package) (not (package-installed-p package)))
+(defun package-install-unless-installed(package)
+  (when (not-installed package) (package-install package)))
 
 ;; package.el を利用してインストール
 (require 'package)
