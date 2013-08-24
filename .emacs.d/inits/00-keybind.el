@@ -7,3 +7,6 @@
 
 ;; C-c C-l で折り返しの on/off
 (global-set-key "\C-c\C-l" 'toggle-truncate-lines)
+
+;; C-c C-c でコメント on/off
+(global-set-key "\C-c\C-c" 'comment-or-uncomment-region)
