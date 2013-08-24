@@ -1,3 +1,13 @@
+;; ===================================================
+;; for Emacs24's package.el
+;; @see Known Issue on http://melpa.milkbox.net/
+(defadvice package-compute-transaction
+  (before package-compute-transaction-reverse (package-list requirements) activate compile)
+    "reverse the requirements"
+    (setq requirements (reverse requirements))
+    (print requirements))
+;; ===================================================
+
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
 ;; install ‚³‚ê‚Ä‚¢‚È‚¢ê‡Apackage install ‚ğs‚¤
 (defun not-installed(package) (not (package-installed-p package)))
