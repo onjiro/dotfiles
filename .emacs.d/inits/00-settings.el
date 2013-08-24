@@ -23,3 +23,6 @@
     (setq truncate-lines t))
   (recenter))
 (global-set-key "\C-c\C-l" 'toggle-truncate-lines)
+
+;; 行移動時には桁位置を固定
+(put 'set-goal-column 'disabled nil)

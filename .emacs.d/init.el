@@ -26,5 +26,3 @@
 (setq init-loader-byte-compile t)
 (setq init-loader-show-log-after-init nil)
 (init-loader-load "~/.emacs.d/inits")
-
-(put 'set-goal-column 'disabled nil)
