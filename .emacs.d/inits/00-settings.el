@@ -14,12 +14,5 @@
 (line-number-mode 1)
 (column-number-mode 1)
 
-;; 折り返し表示ON/OFF
-(defun toggle-truncate-lines ()
-  "折り返し表示をトグル動作します."
-  (interactive)
-  (if truncate-lines
-      (setq truncate-lines nil)
-    (setq truncate-lines t))
-  (recenter))
-(global-set-key "\C-c\C-l" 'toggle-truncate-lines)
+;; 行移動時には桁位置を固定
+(put 'set-goal-column 'disabled nil)
