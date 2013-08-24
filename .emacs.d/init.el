@@ -28,7 +28,6 @@
 (init-loader-load "~/.emacs.d/inits")
 
 (add-to-list 'default-frame-alist '(alpha . 85))
-(setq load-path (cons "~/.emacs.d/elisp" load-path))
 
 ;;; 起動時のウィンドウサイズ
 (add-to-list 'default-frame-alist '(width . 120))
