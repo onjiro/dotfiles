@@ -69,9 +69,3 @@
 
 
 (put 'set-goal-column 'disabled nil)
-
-;; gh.el
-(add-to-list 'load-path "~/.emacs.d/vendor/pcache")
-(add-to-list 'load-path "~/.emacs.d/vendor/logito")
-(add-to-list 'load-path "~/.emacs.d/vendor/gh.el")
-(require 'gh)
