@@ -132,11 +132,6 @@
 ;; to use curl
 (setq gist-use-curl t)
 
-;; undo-tree.el
-(add-to-list 'load-path "~/.emacs.d/vendor/undo-tree")
-(require 'undo-tree)
-(global-undo-tree-mode)
-
 ;; ;; white-space
 ;; ;; タブと全角空白のみ表示
 ;; (autoload 'whitespace-mode           "whitespace"
