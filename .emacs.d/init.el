@@ -66,11 +66,6 @@
 (global-set-key "\C-x\C-b" 'anything-buffers+)
 (global-set-key "\C-x\C-f" 'my-anything-filelist+)
 (global-set-key "\C-x\C-v" 'find-file)
-;; haml-mode
-(require 'haml-mode)
-(autoload 'haml-mode "haml-mode"
-  "Mode for editing haml source files" t)
-(add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
 
 ;;; rubyä÷òAÇÃê›íË
 (autoload 'ruby-mode "ruby-mode"
