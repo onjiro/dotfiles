@@ -27,10 +27,4 @@
 (setq init-loader-show-log-after-init nil)
 (init-loader-load "~/.emacs.d/inits")
 
-(add-to-list 'default-frame-alist '(alpha . 85))
-
-;;; 起動時のウィンドウサイズ
-(add-to-list 'default-frame-alist '(width . 120))
-(add-to-list 'default-frame-alist '(height . 40))
-
 (put 'set-goal-column 'disabled nil)
