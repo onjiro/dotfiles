@@ -4,3 +4,6 @@
   "Capitalize previous word (or arg words)."
   (interactive "p")
   (capitalize-word (- arg)))
+
+;; C-c C-l で折り返しの on/off
+(global-set-key "\C-c\C-l" 'toggle-truncate-lines)
