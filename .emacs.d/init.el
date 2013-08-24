@@ -93,11 +93,6 @@
 
 (put 'set-goal-column 'disabled nil)
 
-;; stylus mode
-(require 'sws-mode)
-(require 'stylus-mode)
-(add-to-list 'auto-mode-alist '("\\.styl$" . stylus-mode))
-
 ;; gh.el
 (add-to-list 'load-path "~/.emacs.d/vendor/pcache")
 (add-to-list 'load-path "~/.emacs.d/vendor/logito")
