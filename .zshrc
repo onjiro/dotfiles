@@ -20,7 +20,6 @@ compinit
 
 setopt auto_cd
 setopt auto_pushd
-setopt correct
 
 # show path at prompt
 PROMPT="%/%% "
