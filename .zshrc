@@ -87,6 +87,10 @@ esac
 alias -g g="git"
 alias -g tmux="tmux -2"
 alias -g emacs='TERM=xterm-256color emacs -nw'
+alias -g vu='vagrant up'
+alias -g vs='vagrant ssh'
+alias -g vp='vagrant provision'
+alias -g vh='vagrant halt'
 
 # use rbenv
 if [ -e $HOME/.rbenv/bin ]; then
