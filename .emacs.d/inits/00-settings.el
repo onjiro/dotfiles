@@ -16,3 +16,8 @@
 
 ;; 行移動時には桁位置を固定
 (put 'set-goal-column 'disabled nil)
+
+;; ファイル名がかぶった場合にわかりやすくする
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'post-forward-angle-brackets)
+(setq uniquify-ignore-buffers-re "*[^*]+*")
