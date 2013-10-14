@@ -91,6 +91,7 @@ alias -g vu='vagrant up'
 alias -g vs='vagrant ssh'
 alias -g vp='vagrant provision'
 alias -g vh='vagrant halt'
+alias -g vr='vagrant reload'
 
 # use rbenv
 if [ -e $HOME/.rbenv/bin ]; then
