@@ -16,3 +16,7 @@
 (helm-mode 1)
 (global-set-key "\C-x\C-f" 'my-helm-mini+)
 (global-set-key "\C-x\C-v" 'find-file)
+
+(setq helm-buffer-max-length 50)
+(setq recentf-max-menu-items 200)
+(setq recentf-max-saved-items 3000)
