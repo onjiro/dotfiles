@@ -10,3 +10,6 @@
 
 ;; C-c C-c でコメント on/off
 (global-set-key "\C-c\C-c" 'comment-or-uncomment-region)
+
+;; C-c C-f でfind-grep
+(global-set-key "\C-c\C-f" 'find-grep)
