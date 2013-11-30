@@ -41,3 +41,7 @@
   "*Face used by hl-line.")
 (setq hl-line-face 'hlline-face)
 (global-hl-line-mode)
+
+;; dired からファイル名変更を可能に
+(require 'wdired)
+(define-key dired-mode-map "r" 'wdired-change-to-wdired-mode)
