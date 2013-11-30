@@ -33,3 +33,6 @@
 
 ;; file 名の補完で大文字小文字を区別しない
 (setq completion-ignore-case t)
+
+;; バッファ自動再読み込み
+(global-auto-revert-mode t)
