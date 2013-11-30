@@ -20,3 +20,15 @@
 (setq helm-buffer-max-length 50)
 (setq recentf-max-menu-items 200)
 (setq recentf-max-saved-items 3000)
+
+(global-set-key (kbd "M-y") 'helm-show-kill-ring)
+
+
+
+
+
+
+
+
+
+
