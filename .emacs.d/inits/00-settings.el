@@ -22,15 +22,6 @@
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 (setq uniquify-ignore-buffers-re "*[^*]+*")
 
-;; recentf をバックエンドで記録
-(when (require 'recentf nil t)
-  (setq recentf-max-saved-items 2000)
-  (setq recentf-exclude '(".recentf"))
-  (setq recentf-auto-cleanup 10)
-  (setq recentf-auto-save-timer
-        (run-with-idle-timer 30 t 'recentf-save-list))
-  (recentf-mode 1))
-
 ;; file 名の補完で大文字小文字を区別しない
 (setq completion-ignore-case t)
 
