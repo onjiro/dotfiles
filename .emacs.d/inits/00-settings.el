@@ -30,3 +30,6 @@
   (setq recentf-auto-save-timer
         (run-with-idle-timer 30 t 'recentf-save-list))
   (recentf-mode 1))
+
+;; file 名の補完で大文字小文字を区別しない
+(setq completion-ignore-case t)
