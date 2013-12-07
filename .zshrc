@@ -89,6 +89,7 @@ alias -g gs="git status"
 alias -g gl="git log --pretty=format:'%C(red reverse)%d%Creset%C(white reverse) %h %Creset %C(green reverse) %an %Creset %C(cyan)%ar%Creset%n%C(white bold)%w(80)%s%Creset%n%n%w(80,2,2)%b' --graph --name-status"
 alias -g tmux="tmux -2"
 alias -g emacs='TERM=xterm-256color emacs -nw'
+alias -g e='emacs'
 alias -g vu='vagrant up'
 alias -g vs='vagrant ssh'
 alias -g vp='vagrant provision'
