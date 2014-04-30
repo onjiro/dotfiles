@@ -4,6 +4,7 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt share_history
 setopt hist_ignore_dups
+PATH=/usr/local/bin:$PATH
 
 # Use emacs key bind
 bindkey -e
