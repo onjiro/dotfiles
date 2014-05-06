@@ -13,3 +13,9 @@
 
 ;; C-c C-f でfind-grep
 (global-set-key "\C-c\C-f" 'find-grep)
+
+;; キーを連打することで何とかするための怠惰な設定
+(package-install-unless-installed 'key-combo)
+(require 'key-combo)
+(key-combo-define-global (kbd "-") '("-" " = " " == " " === "))
+(key-combo-define-global (kbd "[") '("[`!!']" "{`!!'}"))
