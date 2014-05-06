@@ -1,0 +1,16 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: package_format
+# key: pa
+# binding: direct-keybinding
+# --
+
+package $0
+
+import (
+  "fmt"
+  $1
+)
+
+func main() {
+  $1
+}
