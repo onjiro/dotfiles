@@ -18,3 +18,6 @@
 
 (defadvice git-commit-commit (after move-to-magit-buffer activate)
   (delete-window))
+
+(add-hook 'magit-log-edit-mode-hook
+          (turn-off-auto-fill))
