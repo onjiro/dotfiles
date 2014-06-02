@@ -1,7 +1,7 @@
 (dolist (package '(
   ruby-mode
   inf-ruby
-  ruby-electric
+  ruby-end
   ruby-block
 )) (package-install-unless-installed package))
 
@@ -16,11 +16,11 @@
 (autoload 'inf-ruby-keys "inf-ruby"
   "Set local key defs for inf-ruby in ruby-mode")
 (add-hook 'ruby-mode-hook
-          '(lambda () (inf-ruby-keys)))
+          (lambda () (inf-ruby-keys)))
 
-;; ruby-electric
-(require 'ruby-electric)
-(add-hook 'ruby-mode-hook '(lambda () (ruby-electric-mode t)))
+
+;; end を自動で挿入
+(require 'ruby-end)
 
 ;; ruby-block
 (require 'ruby-block)
