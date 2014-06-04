@@ -3,14 +3,13 @@
 # key: pa
 # binding: direct-keybinding
 # --
-
-package $0
+package $1
 
 import (
   "fmt"
-  $1
+  $2
 )
 
 func main() {
-  $1
+  $0
 }
