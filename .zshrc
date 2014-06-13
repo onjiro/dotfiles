@@ -4,7 +4,7 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt share_history
 setopt hist_ignore_dups
-PATH=/usr/local/bin:$PATH
+PATH=/usr/local/bin:~/mygo/bin:$PATH
 export GOPATH=~/mygo
 
 # Use emacs key bind
@@ -125,3 +125,23 @@ alias sf='php app/console'
 alias sfcl='php app/console cache:clear'
 alias sfroute='php app/console router:debug'
 alias sfgb='php app/console generate:bundle'
+
+# use peco if available
+# @see http://blog.kenjiskywalker.org/blog/2014/06/12/peco/
+if which peco > /dev/null; then
+  function peco-select-history() {
+    local tac
+    if which tac > /dev/null; then
+      tac="tac"
+    else
+      tac="tail -r"
+    fi
+    BUFFER=$(history -n 1 | \
+      eval $tac | \
+      peco --query "$LBUFFER")
+    CURSOR=$#BUFFER
+    zle clear-screen
+  }
+  zle -N peco-select-history
+  bindkey '^r' peco-select-history
+fi

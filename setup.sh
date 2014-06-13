@@ -22,10 +22,12 @@ done
 
 # setup ruby-build for rbenv
 mkdir -p .rbenv/plugins
-ln -s `pwd`/ruby-build .rbenv/plugins/ruby-build
+if [ ! -e .rbenv/plugins/ruby-build ]; then
+    ln -s `pwd`/ruby-build .rbenv/plugins/ruby-build
+fi
 
 # make symbolic links
-DOT_FILES=( .zprofile .zshrc .gitconfig .gitignore .emacs.d .hgrc .tmux.conf z .rbenv)
+DOT_FILES=( .zprofile .zshrc .gitconfig .gitignore .emacs.d .hgrc .tmux.conf z .rbenv .peco )
 for file in ${DOT_FILES[@]}; do
     dest=$HOME/$file
     if [ $replace ]; then
