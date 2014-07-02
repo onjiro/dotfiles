@@ -106,6 +106,9 @@ if [ -e $HOME/.rbenv/bin ]; then
   eval "$(rbenv init -)"
 fi
 
+alias -g b="bundle"
+alias -g be="bundle exec"
+
 # use symfony2
 _symfony2_get_command_list () {
         php app/console --no-ansi | sed "1,/Available commands/d" | awk '/^  [a-z]+/ { print $1 }'
