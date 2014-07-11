@@ -20,6 +20,8 @@
 (add-hook 'ruby-mode-hook
           (lambda () (inf-ruby-keys)))
 
+;; magic-comment 挿入を無効化
+(custom-set-variables '(ruby-insert-encoding-magic-comment nil))
 
 ;; end を自動で挿入
 (require 'ruby-end)
