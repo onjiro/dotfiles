@@ -5,4 +5,5 @@
 (add-hook 'coffee-mode-hook
           (lambda ()
             (key-combo-define-local (kbd "-") '("-" "->"))
+            (auto-complete-mode 1)
             ))
