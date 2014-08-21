@@ -91,14 +91,21 @@ alias -g gs="git status"
 alias -g gl="git log --pretty=format:'%C(red reverse)%d%Creset%C(white reverse) %h %Creset %C(green reverse) %an %Creset %C(cyan)%ar%Creset%n%C(white bold)%w(80)%s%Creset%n%n%w(80,2,2)%b' --graph --name-status"
 alias -g tmux="tmux -2"
 alias -g t="tmux"
-alias -g emacs='TERM=xterm-256color emacs -nw'
-alias -g e='emacs .'
 alias -g vu='vagrant up'
 alias -g vs='vagrant ssh'
 alias -g vus='vagrant up;vagrant ssh'
 alias -g vp='vagrant provision'
 alias -g vh='vagrant halt'
 alias -g vr='vagrant reload'
+
+# emacs @see http://d.hatena.ne.jp/flada_auxv/20121110/1352527081
+alias -g e='emacsclient -nw'
+alias -g e.='emacsclient -nw .'
+if pgrep emacs >/dev/null 2>&1; then
+  echo "Emacs server is already running..."
+else
+  `emacs --daemon`
+fi
 
 # use rbenv
 if [ -e $HOME/.rbenv/bin ]; then
