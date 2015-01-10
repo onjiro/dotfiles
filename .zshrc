@@ -113,6 +113,18 @@ if [ -e $HOME/.rbenv/bin ]; then
   eval "$(rbenv init -)"
 fi
 
+# use bundle
+_bundle_exec_rake_get_command_list () {
+  bundle exec rake --tasks
+}
+_bundle_exec_rake () {
+  if [ `which bundle` > /dev/null ]; then
+    compadd `_bundle_exec_rake_get_command_list`
+  fi
+}
+
+compdef _bundle_exec_rake "bundle exec rake"
+
 alias -g b="bundle"
 alias -g be="bundle exec"
 
@@ -155,6 +167,9 @@ if which peco > /dev/null; then
   zle -N peco-select-history
   bindkey '^r' peco-select-history
 fi
+
+# try k
+source ~/tmp/k/k.sh
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
 export COCOS_CONSOLE_ROOT=/Users/mohya/works/kake-bosan/tmp/cocos2d-x-3.3/tools/cocos2d-console/bin

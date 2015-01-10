@@ -1,5 +1,3 @@
-(package-install-unless-installed 'helm)
-
 (require 'helm-config)
 ;; (require 'anything-startup)
 
@@ -22,13 +20,3 @@
 (setq recentf-max-saved-items 3000)
 
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
-
-
-
-
-
-
-
-
-
-

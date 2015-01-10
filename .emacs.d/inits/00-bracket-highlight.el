@@ -5,4 +5,3 @@
 (set-face-attribute 'show-paren-match-face nil
                     :background nil :foreground nil
                     :underline "#ffff00" :weight 'extra-bold)
-

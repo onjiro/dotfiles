@@ -1,12 +1,4 @@
-(dolist (package '(
-  ruby-mode
-  inf-ruby
-  ruby-end
-  ruby-block
-)) (package-install-unless-installed package))
-
-(autoload 'ruby-mode "ruby-mode"
-  "Mode for editing ruby source files" t)
+(require 'ruby-mode)
 (add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Rakefile" . ruby-mode))

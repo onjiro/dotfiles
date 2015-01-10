@@ -1,27 +1,9 @@
-;; ===================================================
-;; for Emacs24's package.el
-;; @see Known Issue on http://melpa.milkbox.net/
-(defadvice package-compute-transaction
-  (before package-compute-transaction-reverse (package-list requirements) activate compile)
-    "reverse the requirements"
-    (setq requirements (reverse requirements))
-    (print requirements))
-;; ===================================================
+;; cask ã‚’åˆ©ç”¨
+(require 'cask)
+(cask-initialize)
 
-(add-to-list 'load-path "~/.emacs.d/site-lisp")
-;; install ‚³‚ê‚Ä‚¢‚È‚¢ê‡Apackage install ‚ðs‚¤
-(defun not-installed(package) (not (package-installed-p package)))
-(defun package-install-unless-installed(package)
-  (when (not-installed package) (package-install package)))
-
-;; package.el ‚ð—˜—p‚µ‚ÄƒCƒ“ƒXƒg[ƒ‹
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
-(package-initialize)
-
-;; init-loader.el ‚ð—˜—p‚µ‚ÄÝ’è‚ð•ªŠ„
-;; "~/.emacs.d/inits" ‚ÍƒfƒtƒHƒ‹ƒg‚Ìƒ[ƒhƒpƒX
+;; init-loader.el ã‚’åˆ©ç”¨ã—ã¦è¨­å®šã‚’åˆ†å‰²
+;; "~/.emacs.d/inits" ã¯ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã®ãƒ­ãƒ¼ãƒ‰ãƒ‘ã‚¹
 (require 'init-loader)
 (setq init-loader-byte-compile t)
 (setq init-loader-show-log-after-init nil)

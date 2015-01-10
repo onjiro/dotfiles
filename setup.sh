@@ -26,6 +26,26 @@ if [ ! -e .rbenv/plugins/ruby-build ]; then
     ln -s `pwd`/ruby-build .rbenv/plugins/ruby-build
 fi
 
+# setup cask
+function cask_install() {
+    pushd $(dirname $0)/.emacs.d
+    cask
+    popd
+}
+
+if [ `uname -s` == Darwin* ]; then
+    brew install cask
+    cask_install
+elif [ `uname -s` == Linux* ]; then
+    curl -fsSkL https://raw.github.com/cask/cask/master/go | python
+    cask_install
+elif [ `uname -s` == CYGWIN* -o `uname -s` == MINGW32_NT* ]; then
+    echo <<-EOF
+Install cask manually on Windows.
+@see http://cask.readthedocs.org/en/latest/guide/installation.html#windows-setup
+    EOF
+fi
+
 # make symbolic links
 DOT_FILES=( .zprofile .zshrc .gitconfig .gitignore .emacs.d .hgrc .tmux.conf z .rbenv .peco )
 for file in ${DOT_FILES[@]}; do
