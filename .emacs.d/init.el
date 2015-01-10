@@ -1,8 +1,3 @@
-(add-to-list 'load-path "~/.emacs.d/site-lisp")
-;; install されていない場合、package install を行う
-(defun package-install-unless-installed(package)
-  (ignore package))
-
 ;; cask を利用
 (require 'cask)
 (cask-initialize)

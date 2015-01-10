@@ -2,6 +2,7 @@
 (source melpa)
 
 ;; global
+(depends-on "init-loader")
 (depends-on "key-combo")
 (depends-on "direx")
 (depends-on "wgrep")
