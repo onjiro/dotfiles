@@ -1,4 +1,4 @@
-(package-install-unless-installed 'migemo)
+
 (require 'migemo)
 (setq migemo-command "cmigemo")
 (setq migemo-options '("-q" "--emacs"))

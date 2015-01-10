@@ -1,5 +1,5 @@
 ;; @see http://cx4a.blogspot.jp/2011/12/popwineldirexel.html
-(package-install-unless-installed 'direx)
+
 (require 'direx)
 
 (push '(direx:direx-mode :position left :width 50 :dedicated t)

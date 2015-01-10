@@ -8,5 +8,4 @@
   (recentf-mode 1))
 
 ;; recentf で dired も記録する
-(package-install-unless-installed 'recentf-ext)
 (require 'recentf-ext)

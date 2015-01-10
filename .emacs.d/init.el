@@ -1,27 +1,14 @@
-;; ===================================================
-;; for Emacs24's package.el
-;; @see Known Issue on http://melpa.milkbox.net/
-(defadvice package-compute-transaction
-  (before package-compute-transaction-reverse (package-list requirements) activate compile)
-    "reverse the requirements"
-    (setq requirements (reverse requirements))
-    (print requirements))
-;; ===================================================
-
 (add-to-list 'load-path "~/.emacs.d/site-lisp")
-;; install ����Ă��Ȃ��ꍇ�Apackage install ���s��
-(defun not-installed(package) (not (package-installed-p package)))
+;; install されていない場合、package install を行う
 (defun package-install-unless-installed(package)
-  (when (not-installed package) (package-install package)))
+  (ignore package))
 
-;; package.el �𗘗p���ăC���X�g�[��
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
-(package-initialize)
+;; cask を利用
+(require 'cask)
+(cask-initialize)
 
-;; init-loader.el �𗘗p���Đݒ�𕪊�
-;; "~/.emacs.d/inits" �̓f�t�H���g�̃��[�h�p�X
+;; init-loader.el を利用して設定を分割
+;; "~/.emacs.d/inits" はデフォルトのロードパス
 (require 'init-loader)
 (setq init-loader-byte-compile t)
 (setq init-loader-show-log-after-init nil)

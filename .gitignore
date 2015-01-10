@@ -2,7 +2,7 @@
 \#*\#
 /.emacs.desktop
 /.emacs.desktop.lock
-/.emacs.d/el-get
+/.emacs.d/.cask
 /.emacs.d/url
 .emacs.d/ac-comphist.dat
 .emacs.d/elpa

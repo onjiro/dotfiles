@@ -1,5 +1,3 @@
-(package-install-unless-installed 'go-mode)
-
 (require 'go-mode)
 
 ;;; exclude go file from auto-save-buffers-enhanced

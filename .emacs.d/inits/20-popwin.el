@@ -1,6 +1,5 @@
 ;; popwin でバッファ表示関連をましにする
 ;; @see http://d.hatena.ne.jp/m2ym/20110120/1295524932
-(package-install-unless-installed 'popwin)
 (require 'popwin)
 (popwin-mode 1)
 
