@@ -34,3 +34,5 @@
 (depends-on "go-mode")
 
 (depends-on "php-mode")
+
+(depends-on "markdown-mode")
