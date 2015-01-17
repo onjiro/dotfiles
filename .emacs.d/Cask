@@ -15,8 +15,14 @@
 (depends-on "yasnippet")
 (depends-on "auto-complete")
 (depends-on "helm")
+
+;; vcs
 (depends-on "magit")
+(depends-on "git-gutter")
+
+;; search
 (depends-on "migemo")
+(depends-on "anzu")
 
 ;; by language
 (depends-on "emmet-mode") ;; zencodingの後継

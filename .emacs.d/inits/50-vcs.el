@@ -1,3 +1,8 @@
+;; git-gutter
+;; diffを常に表示する。便利
+;; @see https://github.com/syohex/emacs-git-gutter
+(global-git-gutter-mode +1)
+
 (require 'magit)
 (global-set-key (kbd "C-c C-SPC") 'magit-status)
 
