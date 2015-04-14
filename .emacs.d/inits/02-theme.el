@@ -1,1 +1,1 @@
-(load-theme 'misterioso)
+(load-theme 'manoj-dark)
