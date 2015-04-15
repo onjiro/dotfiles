@@ -6,6 +6,7 @@
 /.emacs.d/url
 .emacs.d/ac-comphist.dat
 .emacs.d/elpa
+.emacs.d/recentf
 .elc
 auto-save-list
 tramp
