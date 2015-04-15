@@ -23,4 +23,4 @@
 (defadvice git-commit-commit (after move-to-magit-buffer activate)
   (delete-window))
 
-(add-hook 'git-commit-mode-hook 'turn-off-auto-fill)
+(add-hook 'git-commit-mode-hook (setq auto-fill-mode nil))
