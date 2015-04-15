@@ -47,7 +47,7 @@ Install cask manually on Windows.
 fi
 
 # make symbolic links
-DOT_FILES=( .zprofile .zshrc .gitconfig .gitignore .emacs.d .hgrc .tmux.conf z .rbenv .peco )
+DOT_FILES=( .zprofile .zshrc .gitconfig .gitignore .emacs.d .hgrc .tmux.conf z .rbenv .peco k )
 for file in ${DOT_FILES[@]}; do
     dest=$HOME/$file
     if [ $replace ]; then

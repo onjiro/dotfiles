@@ -168,8 +168,8 @@ if which peco > /dev/null; then
   bindkey '^r' peco-select-history
 fi
 
-# try k
-source ~/tmp/k/k.sh
+# setup k
+source ~/k/k.sh
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
 export COCOS_CONSOLE_ROOT=/Users/mohya/works/kake-bosan/tmp/cocos2d-x-3.3/tools/cocos2d-console/bin
