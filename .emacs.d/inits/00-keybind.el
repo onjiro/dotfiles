@@ -10,7 +10,7 @@
 ;; キーを連打することで何とかするための怠惰な設定
 (require 'key-combo)
 (global-key-combo-mode 1)
-(key-combo-define-global (kbd "-") '("-" " = " " == " " === "))
+;;(key-combo-define-global (kbd "-") '("-" " = " " == " " === "))
 (key-combo-define-global (kbd "[") '("[`!!']" "{`!!'}"))
 (key-combo-define-global (kbd "2") '("2" "\"`!!'\"" "22" "222" "2222" "22222" "222222" "2222222" "22222222" "222222222"))
 (key-combo-define-global (kbd "7") '("7" "'`!!''" "77" "777" "7777" "77777" "777777" "7777777" "77777777" "777777777"))
