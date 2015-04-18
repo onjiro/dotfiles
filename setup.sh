@@ -46,14 +46,31 @@ elif [ `uname -s` == CYGWIN* -o `uname -s` == MINGW32_NT* ]; then
 fi
 
 # make symbolic links
-DOT_FILES=( .zprofile .zshrc .gitconfig .gitignore .emacs.d .hgrc .tmux.conf z .rbenv .peco k )
-exit
-for file in ${DOT_FILES[@]}; do
+COUNT=0
+DOTFILES=(
+	.zprofile
+	.zshrc
+	.gitconfig
+	.gitignore
+	.emacs.d
+	.hgrc
+	.tmux.conf
+	z
+	.rbenv
+	.peco
+	k
+)
+for file in ${DOTFILES[@]} ;do
 	dest=$HOME/$file
 	if [ $replace ]; then
 		if [ -e $dest ]; then rm $dest; fi
 	fi
 	if [ ! -e $dest ]; then
 		ln -s $(cd $(dirname $0) && pwd)/$file $dest
+		echo -e "created $dest -> $(cd $(dirname $0) && pwd)/$file"
+		COUNT=$(( COUNT + 1 ))
 	fi
 done
+
+echo -e "----------------------------"
+echo -e "\033[1;32mcreated $COUNT links\033[0m"
