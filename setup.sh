@@ -19,12 +19,6 @@ while getopts rh OPT; do
 done
 shift $((OPTIND - 1))
 
-# setup ruby-build for rbenv
-mkdir -p .rbenv/plugins
-if [ ! -e .rbenv/plugins/ruby-build ]; then
-	ln -s `pwd`/ruby-build .rbenv/plugins/ruby-build
-fi
-
 # setup cask
 function cask_install() {
 	pushd $(dirname $0)/.emacs.d
