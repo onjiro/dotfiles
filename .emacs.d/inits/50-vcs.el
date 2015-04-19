@@ -4,6 +4,7 @@
 (global-git-gutter-mode +1)
 
 (require 'magit)
+(setq magit-last-seen-setup-instructions "1.4.0")
 (global-set-key (kbd "C-c C-SPC") 'magit-status)
 
 ;; magit-statusを実行する前に Window構成を保存, その後最大化して
