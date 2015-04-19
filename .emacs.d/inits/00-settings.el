@@ -45,3 +45,6 @@
 ;; dired からファイル名変更を可能に
 (require 'wdired)
 (define-key dired-mode-map "r" 'wdired-change-to-wdired-mode)
+
+;; タブの表示幅を4に
+(setq default-tab-width 4)
