@@ -23,6 +23,7 @@
 ;; search
 (depends-on "migemo")
 (depends-on "anzu")
+(depends-on "helm-ag")
 
 ;; by language
 (depends-on "emmet-mode") ;; zencodingの後継

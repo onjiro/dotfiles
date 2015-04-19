@@ -4,8 +4,8 @@
 ;; C-c C-c でコメント on/off
 (global-set-key "\C-c\C-c" 'comment-or-uncomment-region)
 
-;; C-c C-f でfind-grep
-(global-set-key "\C-c\C-f" 'find-grep)
+;; C-c C-f でfind-grep -> helm-ag を利用するように変更
+;;(global-set-key "\C-c\C-f" 'find-grep)
 
 ;; キーを連打することで何とかするための怠惰な設定
 (require 'key-combo)
