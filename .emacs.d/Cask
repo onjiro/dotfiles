@@ -24,6 +24,7 @@
 (depends-on "migemo")
 (depends-on "anzu")
 (depends-on "helm-ag")
+(depends-on "github-browse-file")
 
 ;; by language
 (depends-on "emmet-mode") ;; zencodingの後継
