@@ -8,6 +8,7 @@
 .emacs.d/elpa
 .emacs.d/recentf
 .elc
+.agignore
 auto-save-list
 tramp
 .\#*
