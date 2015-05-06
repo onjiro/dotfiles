@@ -25,6 +25,8 @@
 (depends-on "anzu")
 (depends-on "helm-ag")
 (depends-on "github-browse-file")
+(depends-on "milkode")
+(depends-on "anything-milkode")
 
 ;; by language
 (depends-on "emmet-mode") ;; zencodingの後継
