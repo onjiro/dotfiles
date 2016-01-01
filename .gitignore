@@ -2,7 +2,7 @@
 \#*\#
 /.emacs.desktop
 /.emacs.desktop.lock
-/.emacs.d/.cask
+/.emacs.d/el-get
 /.emacs.d/url
 .emacs.d/ac-comphist.dat
 .emacs.d/elpa
@@ -18,3 +18,4 @@ build.log
 *.rej
 
 *.swp
+bower_components

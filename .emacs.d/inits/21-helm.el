@@ -1,5 +1,5 @@
-(require 'helm-config)
-;; (require 'anything-startup)
+(el-get-bundle 'helm
+  :features (helm-config))
 
 (defun my-helm-mini+ ()
   (interactive)

@@ -1,5 +1,5 @@
 ;; @see http://konbu13.hatenablog.com/entry/2014/01/12/113300
-(require 'yasnippet)
+(el-get-bundle! 'yasnippet)
 (yas-global-mode t)
 (define-key yas-minor-mode-map (kbd "M-i") 'yas-expand)
 

@@ -8,4 +8,4 @@
   (recentf-mode 1))
 
 ;; recentf で dired も記録する
-(require 'recentf-ext)
+(el-get-bundle! 'recentf-ext)

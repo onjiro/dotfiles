@@ -1,6 +1,6 @@
 ;; popwin でバッファ表示関連をましにする
 ;; @see http://d.hatena.ne.jp/m2ym/20110120/1295524932
-(require 'popwin)
+(el-get-bundle! 'popwin)
 (popwin-mode 1)
 
 (setq popwin:special-display-config

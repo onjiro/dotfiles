@@ -1,2 +1,2 @@
-(require 'undo-tree)
+(el-get-bundle! 'undo-tree)
 (global-undo-tree-mode)

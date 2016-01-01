@@ -1,9 +1,16 @@
 ;; git-gutter
 ;; diffを常に表示する。便利
 ;; @see https://github.com/syohex/emacs-git-gutter
+(el-get-bundle 'git-gutter)
 (global-git-gutter-mode +1)
 
-(require 'magit)
+;; バージョン2以降ではキーバインドがまだ安定していないためしばらく1系を使う
+(el-get-bundle 'magit/git-modes
+  :features ("git-commit-mode" "git-rebase-mode" "gitattributes-mode" "gitconfig-mode" "gitignore-mode")
+  :branch "1.0.0")
+(el-get-bundle! 'magit/magit
+  :depends (git-modes)
+  :branch "1.4.2")
 (setq magit-last-seen-setup-instructions "1.4.0")
 (global-set-key (kbd "C-c C-SPC") 'magit-status)
 

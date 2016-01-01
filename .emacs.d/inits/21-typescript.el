@@ -1,8 +1,9 @@
-;; tss.el に同梱の typescript.el を利用する
-(require 'typescript)
-(add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
+(el-get-bundle 'aki2o/emacs-tss
+  :depends ("json-mode" "log4e" "yaxception")
+  :features ("typescript" "tss"))
 
-(require 'tss)
+;; tss.el に同梱の typescript.el を利用する
+(add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
 
 ;; キーバインド
 (setq tss-popup-help-key "C-:")

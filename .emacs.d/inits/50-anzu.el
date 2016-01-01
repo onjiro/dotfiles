@@ -1,3 +1,4 @@
+(el-get-bundle 'anzu)
 ;; anzu
 ;; 検索の際に全体のマッチ数を表示する
 (global-anzu-mode +1)

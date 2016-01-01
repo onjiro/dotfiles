@@ -1,4 +1,4 @@
-(require 'go-mode)
+(el-get-bundle! 'go-mode)
 
 ;;; exclude go file from auto-save-buffers-enhanced
 (push ".+\.go$" auto-save-buffers-enhanced-exclude-regexps)
