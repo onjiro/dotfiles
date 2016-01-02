@@ -1,5 +1,6 @@
 (setq el-get-lock-package-versions
-      '((git-modes :checksum "3423997a89f63eb4c8a4ce495928bc5951767932")
+      '((flycheck-tip :checksum "9eefbea4ccc9e348d356faf28c9a1902ba28f29e")
+        (git-modes :checksum "3423997a89f63eb4c8a4ce495928bc5951767932")
         (sequential-command-config :checksum "c35a1ef45d77612bc6cd1a8ad9b29f00423f433f")
         (sequential-command :checksum "2d211c05cbd630ac88bb34fe91715f76b853f138")
         (anything-config :checksum "e3edc9b406a8faca3d4a5527c9bd8aa66aba5a96")
