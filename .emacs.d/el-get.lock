@@ -1,5 +1,8 @@
 (setq el-get-lock-package-versions
-      '((flycheck-tip :checksum "9eefbea4ccc9e348d356faf28c9a1902ba28f29e")
+      '((warm-night-theme :checksum "67cc2a1591c0627e6310cdfe8ca7c8d4565b9c16")
+        (flycheck-tip :checksum "9eefbea4ccc9e348d356faf28c9a1902ba28f29e")
+        (flycheck-pos-tip :checksum "32ddd6bf3c1a642a9f7afe25475c4bf2ebc7aae9")
+        (pos-tip :checksum "92c6b81591b32a0fb3da65f6a514ddcce1d277c0")
         (git-modes :checksum "3423997a89f63eb4c8a4ce495928bc5951767932")
         (sequential-command-config :checksum "c35a1ef45d77612bc6cd1a8ad9b29f00423f433f")
         (sequential-command :checksum "2d211c05cbd630ac88bb34fe91715f76b853f138")
