@@ -10,6 +10,9 @@
     (goto-char (point-max))
     (eval-print-last-sexp)))
 
+(remove-hook 'el-get-post-install-hooks 'el-get-post-install-notification)
+(remove-hook 'el-get-post-update-hooks 'el-get-post-update-notification)
+
 ;; el-get.lock ファイルにバージョン固定の指定を書き出す
 (el-get-bundle 'tarao/el-get-lock)
 (el-get-lock)
@@ -43,7 +46,9 @@
  '(anzu-deactivate-region t)
  '(anzu-mode-lighter "")
  '(anzu-search-threshold 1000)
- '(custom-safe-themes (quote ("aed65eaa2b5e49d6743efd8056f4bf375436dba34f636dee094a62de22ce03f3" default)))
+ '(custom-safe-themes
+   (quote
+    ("aed65eaa2b5e49d6743efd8056f4bf375436dba34f636dee094a62de22ce03f3" default)))
  '(flycheck-display-errors-function (function flycheck-pos-tip-error-messages))
  '(helm-ag-base-command "ag --nocolor --nogroup --ignore-case")
  '(helm-ag-command-option "--all-text")
