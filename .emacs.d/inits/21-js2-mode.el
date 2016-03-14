@@ -1,5 +1,5 @@
 (el-get-bundle! 'js2-mode
-                :features("js2-mode" "js2-old-indent" "js2-jsx-mode"))
+  :features("js2-mode" "js2-old-indent"))
 
 ;; js2-mode
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
