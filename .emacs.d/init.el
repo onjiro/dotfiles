@@ -10,8 +10,8 @@
     (goto-char (point-max))
     (eval-print-last-sexp)))
 
-(remove-hook 'el-get-post-install-hooks 'el-get-post-install-notification)
-(remove-hook 'el-get-post-update-hooks 'el-get-post-update-notification)
+;; dbus error を回避
+(setq el-get-notify-type 'message)
 
 ;; el-get.lock ファイルにバージョン固定の指定を書き出す
 (el-get-bundle 'tarao/el-get-lock)
