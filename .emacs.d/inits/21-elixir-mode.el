@@ -1,4 +1,5 @@
-(el-get-bundle! 'elixir-lang/emacs-elixir)
+(el-get-bundle 'elixir-lang/emacs-elixir
+  :features (elixir-mode))
 
 ;; Highlights *.elixir2 as well
 (add-to-list 'auto-mode-alist '("\\.elixir2\\'" . elixir-mode))
