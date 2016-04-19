@@ -1,5 +1,6 @@
 (setq el-get-lock-package-versions
-      '((elixir :checksum "344d77dd0d23e17a4438171d3194184b209a0de6")
+      '((el-get-lock :checksum "046ffb568c6964ea30813338234aea2d60a5c632")
+        (elixir :checksum "344d77dd0d23e17a4438171d3194184b209a0de6")
         (dired+ :checksum "7b9813f79e86d2e4f36eea74a86ce83f5336fdc6")
         (el-get :checksum "29d911e77fa240e23d89362df641234afb9dfb6b")
         (tab-jump-out :checksum "1c3fec1826d2891177ea78e4e7cce1dc67e83e51")
