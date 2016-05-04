@@ -1,5 +1,7 @@
 (setq el-get-lock-package-versions
-      '((el-get-lock :checksum "046ffb568c6964ea30813338234aea2d60a5c632")
+      '((imenus\.el :checksum "ee1bbd2228dbb86df2865dc9004d375421b171ba")
+        (imenu-anywhere :checksum "938166bc02b88edd3af94dd1381755eed0b6d4e0")
+        (el-get-lock :checksum "046ffb568c6964ea30813338234aea2d60a5c632")
         (elixir :checksum "344d77dd0d23e17a4438171d3194184b209a0de6")
         (dired+ :checksum "7b9813f79e86d2e4f36eea74a86ce83f5336fdc6")
         (el-get :checksum "29d911e77fa240e23d89362df641234afb9dfb6b")
@@ -24,7 +26,7 @@
         (json-snatcher :checksum "c4cecc0a5051bd364373aa499c47a1bb7a5ac51c")
         (flycheck :checksum "bb4354b8ebd45457e3716a82f461cf348aa3d9f0")
         (migemo :checksum "c2240afa9afc0f003bb1d846710505e8e8e38169")
-        (magit :checksum "aa2f4f1751af191a715e4aed866bda11f10cf0f0")
+        (magit :checksum "93cbf42fc3c90274ef9e10eb127d66a6e237dae2")
         (milkode :checksum "ad934fb1d180ae1d0d111c2c6c86d72b33375aad")
         (git-gutter :checksum "cb2b341162447bc04b6f561dbb2e5add9a24c134")
         (anything-milkode :checksum "d6b2be13a351c41793e9cc13c1320953939d3ac9")

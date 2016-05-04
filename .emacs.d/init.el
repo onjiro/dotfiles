@@ -9,6 +9,7 @@
        "https://raw.githubusercontent.com/dimitri/el-get/master/el-get-install.el")
     (goto-char (point-max))
     (eval-print-last-sexp)))
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 
 ;; dbus error を回避
 (setq el-get-notify-type 'message)
