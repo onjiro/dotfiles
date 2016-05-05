@@ -2,6 +2,9 @@
 ;; diffを常に表示する。便利
 ;; @see https://github.com/syohex/emacs-git-gutter
 (el-get-bundle 'git-gutter)
+(global-set-key (kbd "C-c C-n") 'git-gutter:next-hunk)
+(global-set-key (kbd "C-c C-p") 'git-gutter:previous-hunk)
+
 (global-git-gutter-mode +1)
 
 (el-get-bundle magit/with-editor
