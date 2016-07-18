@@ -1,4 +1,5 @@
-(el-get-bundle! 'company-mode)
+(el-get-bundle 'company-mode
+  :features (company))
 (global-company-mode)
 (setq company-selection-wrap-around t)
 
