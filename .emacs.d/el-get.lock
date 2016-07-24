@@ -1,5 +1,6 @@
 (setq el-get-lock-package-versions
-      '((company-mode :checksum "9476aef021dbc4e703a521bcffd8d91234626351")
+      '((typescript-mode :checksum "aae70b59e64e1d7b3cfaee41e9134bfa19ac7363")
+        (company-mode :checksum "9476aef021dbc4e703a521bcffd8d91234626351")
         (with-editor :checksum "d28d07497f67fea4c62fe7a2d3201fd86fb64fe2")
         (dash\.el :checksum "1fce650170b974a3a76ad7150fe13ca0b9769d2d")
         (emacs-async :checksum "228ec4bb351a9e14e338b9cb09eeb4809957c909")
@@ -8,7 +9,6 @@
         (el-get-lock :checksum "046ffb568c6964ea30813338234aea2d60a5c632")
         (elixir :checksum "344d77dd0d23e17a4438171d3194184b209a0de6")
         (dired+ :checksum "7b9813f79e86d2e4f36eea74a86ce83f5336fdc6")
-        (el-get :checksum "29d911e77fa240e23d89362df641234afb9dfb6b")
         (tab-jump-out :checksum "1c3fec1826d2891177ea78e4e7cce1dc67e83e51")
         (avy :checksum "15d0679385fdf3f1d20904ff68ebcb522c4a87d4")
         (ace-jump-mode :checksum "8351e2df4fbbeb2a4003f2fb39f46d33803f3dac")
@@ -40,10 +40,6 @@
         (yaml-mode :checksum "6ddd55205224c2f2c306699e021cedbaeecfaaf2")
         (wgrep :checksum "7ef26c51feaef8a5ec0929737130ab8ba326983c")
         (web-mode :checksum "71aebc9f003dccce021be917deb58e9c0dd5c704")
-        (emacs-tss :checksum "81ac6351a2ae258fd0ebf916dae9bd5a179fefd0")
-        (tss :checksum "81ac6351a2ae258fd0ebf916dae9bd5a179fefd0")
-        (yaxception :checksum "4e94cf3e0b9b5631b0e90eb4b7de597ee7185875")
-        (log4e :checksum "6592682ab7de0e3d1915aa4d3c53e083be79fbeb")
         (sass-mode :checksum "3da9040680880743fddb55a965ecd150d1039df6")
         (haml-mode :checksum "7717db6fa4a90d618b4a5e3fef2ac1d24ce39be3")
         (ruby-block :checksum "289c34dca6daa1a1591537e1c56b687c14631930")
@@ -72,4 +68,5 @@
         (auto-save-buffers-enhanced :checksum "caf594120781a323ac37eab82bcf87f1ed4c9c42")
         (init-loader :checksum "1f28a0b801cbb08aa9b47fd15ceab243a2bc064c")))
 (setq el-get-lock-locked-packages 'nil)
-(setq el-get-lock-unlocked-packages 'nil)
+(setq el-get-lock-unlocked-packages
+      '(el-get))

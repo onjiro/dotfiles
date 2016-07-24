@@ -1,17 +1,23 @@
-(el-get-bundle 'aki2o/emacs-tss
-  :depends ("json-mode" "log4e" "yaxception")
-  :features ("typescript" "tss"))
+(el-get-bundle! 'tide)
 
-;; tss.el に同梱の typescript.el を利用する
-(add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
+(defun setup-tide-mode ()
+  (interactive)
+  (tide-setup)
+  (flycheck-mode +1)
+  (setq flycheck-check-syntax-automatically '(save mode-enabled))
+  (eldoc-mode +1)
+  ;; company is an optional dependency. You have to
+  ;; install it separately via package-install
+  ;; `M-x package-install [ret] company`
+  (company-mode +1))
 
-;; キーバインド
-(setq tss-popup-help-key "C-:")
-(setq tss-jump-to-definition-key "C->")
-(setq tss-implement-definition-key "C-c i")
+;; aligns annotation to the right hand side
+(setq company-tooltip-align-annotations t)
 
-;; 必要に応じて適宜カスタマイズして下さい。以下のS式を評価することで項目についての情報が得られます。
-;; (customize-group "tss")
+;; formats the buffer before saving
+;; (add-hook 'before-save-hook 'tide-format-before-save)
 
-;; 推奨設定を行う
-(tss-config-default)
+(add-hook 'typescript-mode-hook #'setup-tide-mode)
+
+;; format options
+(setq tide-format-options '(:insertSpaceAfterFunctionKeywordForAnonymousFunctions t :placeOpenBraceOnNewLineForFunctions nil))
