@@ -6,7 +6,6 @@
         (emacs-async :checksum "228ec4bb351a9e14e338b9cb09eeb4809957c909")
         (imenus\.el :checksum "ee1bbd2228dbb86df2865dc9004d375421b171ba")
         (imenu-anywhere :checksum "938166bc02b88edd3af94dd1381755eed0b6d4e0")
-        (el-get-lock :checksum "046ffb568c6964ea30813338234aea2d60a5c632")
         (elixir :checksum "344d77dd0d23e17a4438171d3194184b209a0de6")
         (dired+ :checksum "7b9813f79e86d2e4f36eea74a86ce83f5336fdc6")
         (tab-jump-out :checksum "1c3fec1826d2891177ea78e4e7cce1dc67e83e51")
@@ -69,4 +68,4 @@
         (init-loader :checksum "1f28a0b801cbb08aa9b47fd15ceab243a2bc064c")))
 (setq el-get-lock-locked-packages 'nil)
 (setq el-get-lock-unlocked-packages
-      '(el-get))
+      '(el-get-lock el-get))
