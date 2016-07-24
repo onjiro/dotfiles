@@ -3,6 +3,9 @@
 (global-company-mode)
 (setq company-selection-wrap-around t)
 
+;; 文字列補完での小文字化をしない
+(custom-set-variables '(company-dabbrev-downcase nil))
+
 (set-face-attribute 'company-tooltip nil
                     :foreground "black" :background "lightgrey")
 (set-face-attribute 'company-tooltip-common nil
