@@ -13,3 +13,5 @@
 (add-hook 'js2-jsx-mode-hook (lambda ()
                                (auto-complete-mode 1)
                                (setq sgml-attribute-offset 2)))
+
+(custom-set-variables '(js-indent-level 2)) 

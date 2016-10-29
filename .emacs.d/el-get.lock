@@ -1,6 +1,9 @@
 (setq el-get-lock-package-versions
-      '((inf-ruby :checksum "4d820954241988b4506e067fa9fdf6d574876e2c")
-        (ace-isearch :checksum "9a32a039623e3907a4fce959aa48c26a79fb249b")
+      '((el-get :checksum "facea41fde82a4e90a5e20d90fe54e4fc02c5fec")
+        (pkg-info :checksum "76ba7415480687d05a4353b27fea2ae02b8d9d61")
+        (key-combo :checksum "2fb5c65bc82d5bd2964e2b163822429ab45d90a1")
+        (inf-ruby :checksum "4d820954241988b4506e067fa9fdf6d574876e2c")
+        (ace-isearch :checksum "b8c59511d7ff13ed050a80be372121d9cba9e160")
         (anything :checksum "2d7e0450e13ab04b20f4dff08f32936e78677e58")
         (typescript-mode :checksum "aae70b59e64e1d7b3cfaee41e9134bfa19ac7363")
         (company-mode :checksum "9476aef021dbc4e703a521bcffd8d91234626351")

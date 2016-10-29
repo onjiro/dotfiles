@@ -31,6 +31,11 @@
 (el-get-bundle! 'ace-isearch)
 (global-ace-isearch-mode 1)
 
+(custom-set-variables
+ '(ace-isearch-jump-delay 1)
+ '(ace-isearch-input-length 100))
+
+
 ;;; isearchとの併合
 (defun isearch-forward-or-helm-swoop (use-helm-swoop)
   (interactive "p")

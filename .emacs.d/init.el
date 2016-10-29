@@ -1,3 +1,10 @@
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (when load-file-name
   (setq user-emacs-directory (file-name-directory load-file-name)))
 
@@ -47,6 +54,7 @@
  '(anzu-deactivate-region t)
  '(anzu-mode-lighter "")
  '(anzu-search-threshold 1000)
+ '(company-dabbrev-downcase nil)
  '(custom-safe-themes
    (quote
     ("aed65eaa2b5e49d6743efd8056f4bf375436dba34f636dee094a62de22ce03f3" default)))
@@ -54,6 +62,7 @@
  '(helm-ag-base-command "ag --nocolor --nogroup --ignore-case")
  '(helm-ag-command-option "--all-text")
  '(helm-ag-insert-at-point (quote symbol))
+ '(js-indent-level 2)
  '(ruby-insert-encoding-magic-comment nil)
  '(yas-prompt-functions (quote (my-yas/prompt))))
 (custom-set-faces
