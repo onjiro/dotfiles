@@ -1,5 +1,8 @@
 (setq el-get-lock-package-versions
-      '((el-get :checksum "facea41fde82a4e90a5e20d90fe54e4fc02c5fec")
+      '((switch-window :checksum "c1bbe51573a19ff6adae8531bf20601e5da5f7db")
+        (helm-projectile :checksum "bc14d326fe892c902c55d093cccefb0fefde29b9")
+        (projectile :checksum "665972dab7bab20c792f92a9e294b5677377711c")
+        (el-get :checksum "facea41fde82a4e90a5e20d90fe54e4fc02c5fec")
         (pkg-info :checksum "76ba7415480687d05a4353b27fea2ae02b8d9d61")
         (key-combo :checksum "2fb5c65bc82d5bd2964e2b163822429ab45d90a1")
         (inf-ruby :checksum "4d820954241988b4506e067fa9fdf6d574876e2c")
