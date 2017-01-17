@@ -19,3 +19,4 @@ build.log
 
 *.swp
 bower_components
+.emacs.d/projectile-bookmarks.eld
