@@ -2,6 +2,17 @@
 
 load test_helper
 
+@test "shell integration disabled" {
+  run rbenv shell
+  assert_failure "rbenv: shell integration not enabled. Run \`rbenv init' for instructions."
+}
+
+@test "shell integration enabled" {
+  eval "$(rbenv init -)"
+  run rbenv shell
+  assert_success "rbenv: no shell-specific version configured"
+}
+
 @test "no shell version" {
   mkdir -p "${RBENV_TEST_DIR}/myproject"
   cd "${RBENV_TEST_DIR}/myproject"
@@ -20,14 +31,34 @@ load test_helper
   assert_success 'echo "$RBENV_VERSION"'
 }
 
+@test "shell revert" {
+  RBENV_SHELL=bash run rbenv-sh-shell -
+  assert_success
+  assert_line 0 'if [ -n "${RBENV_VERSION_OLD+x}" ]; then'
+}
+
+@test "shell revert (fish)" {
+  RBENV_SHELL=fish run rbenv-sh-shell -
+  assert_success
+  assert_line 0 'if set -q RBENV_VERSION_OLD'
+}
+
 @test "shell unset" {
   RBENV_SHELL=bash run rbenv-sh-shell --unset
-  assert_success "unset RBENV_VERSION"
+  assert_success
+  assert_output <<OUT
+RBENV_VERSION_OLD="\$RBENV_VERSION"
+unset RBENV_VERSION
+OUT
 }
 
 @test "shell unset (fish)" {
   RBENV_SHELL=fish run rbenv-sh-shell --unset
-  assert_success "set -e RBENV_VERSION"
+  assert_success
+  assert_output <<OUT
+set -gu RBENV_VERSION_OLD "\$RBENV_VERSION"
+set -e RBENV_VERSION
+OUT
 }
 
 @test "shell change invalid version" {
@@ -42,11 +73,19 @@ SH
 @test "shell change version" {
   mkdir -p "${RBENV_ROOT}/versions/1.2.3"
   RBENV_SHELL=bash run rbenv-sh-shell 1.2.3
-  assert_success 'export RBENV_VERSION="1.2.3"'
+  assert_success
+  assert_output <<OUT
+RBENV_VERSION_OLD="\$RBENV_VERSION"
+export RBENV_VERSION="1.2.3"
+OUT
 }
 
 @test "shell change version (fish)" {
   mkdir -p "${RBENV_ROOT}/versions/1.2.3"
   RBENV_SHELL=fish run rbenv-sh-shell 1.2.3
-  assert_success 'setenv RBENV_VERSION "1.2.3"'
+  assert_success
+  assert_output <<OUT
+set -gu RBENV_VERSION_OLD "\$RBENV_VERSION"
+set -gx RBENV_VERSION "1.2.3"
+OUT
 }

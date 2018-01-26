@@ -47,13 +47,13 @@ OUT
   root="$(cd $BATS_TEST_DIRNAME/.. && pwd)"
   run rbenv-init - fish
   assert_success
-  assert_line ". '${root}/test/../libexec/../completions/rbenv.fish'"
+  assert_line "source '${root}/test/../libexec/../completions/rbenv.fish'"
 }
 
 @test "fish instructions" {
   run rbenv-init fish
   assert [ "$status" -eq 1 ]
-  assert_line 'status --is-interactive; and . (rbenv init -|psub)'
+  assert_line 'status --is-interactive; and source (rbenv init -|psub)'
 }
 
 @test "option to skip rehash" {
@@ -73,7 +73,7 @@ OUT
   export PATH="${BATS_TEST_DIRNAME}/../libexec:/usr/bin:/bin:/usr/local/bin"
   run rbenv-init - fish
   assert_success
-  assert_line 0 "setenv PATH '${RBENV_ROOT}/shims' \$PATH"
+  assert_line 0 "set -gx PATH '${RBENV_ROOT}/shims' \$PATH"
 }
 
 @test "can add shims to PATH more than once" {
@@ -87,7 +87,7 @@ OUT
   export PATH="${RBENV_ROOT}/shims:$PATH"
   run rbenv-init - fish
   assert_success
-  assert_line 0 "setenv PATH '${RBENV_ROOT}/shims' \$PATH"
+  assert_line 0 "set -gx PATH '${RBENV_ROOT}/shims' \$PATH"
 }
 
 @test "outputs sh-compatible syntax" {
