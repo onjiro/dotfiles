@@ -1,5 +1,6 @@
 ;;; win-switch.el --- C-o o o ...で連続してウィンドウの移動を可能にする
 (el-get-bundle 'genovese/win-switch
+  :type "http"
   :url "https://raw.githubusercontent.com/genovese/win-switch/master/win-switch.el"
   ;; 0.75秒間受け付けるタイマー
   (setq win-switch-idle-time 1)
