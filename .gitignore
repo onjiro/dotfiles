@@ -16,6 +16,7 @@ build.log
 *.elc
 *.orig
 *.rej
+.DS_Store
 
 *.swp
 bower_components
