@@ -46,6 +46,7 @@ DOTFILES=(
 	.zshrc
 	.gitconfig
 	.gitignore
+	.tigrc
 	.emacs.d
 	.hgrc
 	.tmux.conf
