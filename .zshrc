@@ -4,7 +4,7 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt share_history
 setopt hist_ignore_dups
-PATH=/usr/local/bin:~/mygo/bin:$PATH
+PATH=/usr/local/bin:~/mygo/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH
 export GOPATH=~/mygo
 
 # Use emacs key bind
@@ -19,9 +19,6 @@ zstyle :compinstall filename '/home/chihiro/.zshrc'
 
 autoload -Uz compinit
 compinit
-
-setopt auto_cd
-setopt auto_pushd
 
 # show path at prompt
 PROMPT="%/%% "
@@ -90,28 +87,13 @@ alias -g g="git"
 alias -g gs="git status"
 alias -g gl="git log --pretty=format:'%C(red reverse)%d%Creset%C(white reverse) %h %Creset %C(green reverse) %an %Creset %C(cyan)%ar%Creset%n%C(white bold)%w(80)%s%Creset%n%n%w(80,2,2)%b' --graph --name-status"
 alias -g tmux="tmux -2"
-alias -g t="tmux"
-alias -g vu='vagrant up'
-alias -g vs='vagrant ssh'
-alias -g vus='vagrant up;vagrant ssh'
-alias -g vp='vagrant provision'
-alias -g vh='vagrant halt'
-alias -g vr='vagrant reload'
 
 # emacs @see http://d.hatena.ne.jp/flada_auxv/20121110/1352527081
 alias -g e='emacsclient -nw'
 alias -g e.='emacsclient -nw .'
-if pgrep emacs >/dev/null 2>&1; then
-  echo "Emacs server is already running..."
-else
-  `emacs --daemon`
-fi
 
-# use rbenv
-if [ -e $HOME/.rbenv/bin ]; then
-  export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
-  eval "$(rbenv init -)"
-fi
+# use anyenv
+eval "$(anyenv init -)"
 
 # use bundle
 _bundle_exec_rake_get_command_list () {
@@ -127,26 +109,6 @@ compdef _bundle_exec_rake "bundle exec rake"
 
 alias -g b="bundle"
 alias -g be="bundle exec"
-
-# use symfony2
-_symfony2_get_command_list () {
-        php app/console --no-ansi | sed "1,/Available commands/d" | awk '/^  [a-z]+/ { print $1 }'
-}
-
-_symfony2 () {
-  if [ -f app/console ]; then
-    compadd `_symfony2_get_command_list`
-  fi
-}
-
-compdef _symfony2 app/console
-compdef _symfony2 sf
-
-#Alias
-alias sf='php app/console'
-alias sfcl='php app/console cache:clear'
-alias sfroute='php app/console router:debug'
-alias sfgb='php app/console generate:bundle'
 
 # use peco if available
 # @see http://blog.kenjiskywalker.org/blog/2014/06/12/peco/
@@ -168,17 +130,10 @@ if which peco > /dev/null; then
   bindkey '^r' peco-select-history
 fi
 
-# setup k
-source ~/k/k.sh
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-export COCOS_CONSOLE_ROOT=/Users/mohya/works/kake-bosan/tmp/cocos2d-x-3.3/tools/cocos2d-console/bin
-export PATH=$COCOS_CONSOLE_ROOT:$PATH
-
-# Add environment variable COCOS_X_ROOT for cocos2d-x
-export COCOS_X_ROOT=/Users/mohya/works/kake-bosan/tmp/cocos2d-x-3.3
-export PATH=$COCOS_X_ROOT:$PATH
-
-# Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
-export COCOS_TEMPLATES_ROOT=/Users/mohya/works/kake-bosan/tmp/cocos2d-x-3.3/templates
-export PATH=$COCOS_TEMPLATES_ROOT:$PATH
+# setup flutter
+export FLUTTER_HOME=~/programs/flutter
+if [ -e $FLUTTER_HOME ]; then
+  export PATH="$PATH:$FLUTTER_HOME/bin"
+fi
